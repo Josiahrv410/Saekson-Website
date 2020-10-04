@@ -1,0 +1,1102 @@
+html,
+body {
+  font-family: "avenir Next Condensed", "Lato", "Oswald", Arial, Helvetica,
+    sans-serif;
+  background: #424242;
+  overflow: hidden;
+  width: 100vw;
+  overflow-y: scroll;
+}
+
+* {
+  text-decoration: none !important;
+  list-style: none !important;
+}
+
+ul {
+  padding: 0;
+}
+
+/* ------------------------------------------------------------------ 
+------------------------------- HEADER ------------------------------
+------------------------------------------------------------------ */
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  width: 100%;
+  height: 50px;
+  padding: 0 10%;
+}
+
+/* ---------------------------LOGO--------------------------------*/
+
+header .logo a {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* ---------------------------MENU--------------------------------*/
+
+header .menu {
+  display: flex;
+}
+
+header .menu.mobile-mode .link {
+  display: none;
+}
+
+header .menu .open-mobile-menu {
+  display: none;
+}
+
+header .menu.mobile-mode .open-mobile-menu {
+  display: block;
+  color: white;
+}
+
+header .menu.mobile-mode .open-mobile-menu {
+  display: block;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+header .menu a {
+  display: inline-block;
+  font-weight: 400;
+  padding: 0 20px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+header .menu .link {
+  padding: 20px;
+}
+
+header .menu .dropdown {
+  position: relative;
+}
+
+header .menu .dropdown .sub-menu {
+  display: none;
+  position: absolute;
+  transform: translate3d(0, 10px, 0);
+  background-color: rgb(219, 219, 219);
+  min-width: 150px;
+  border-radius: 3px;
+}
+
+header .menu .dropdown:hover .sub-menu,
+header .menu .dropdown .sub-menu:hover {
+  display: block;
+}
+
+header .menu .dropdown .sub-menu a {
+  color: black;
+  display: block;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+header .menu .dropdown .sub-menu a:hover {
+  background: black;
+  color: #facd33;
+}
+
+/* ------------------------------------------------------------------ 
+------------------------------- JUMBO ------------------------------
+------------------------------------------------------------------ */
+
+#jumbo {
+  background: black;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+#jumbo .bg-img {
+  background: url("https://saeksonmuaythai.com/wp-content/uploads/2020/01/Q0A1615-scaled.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
+#jumbo .transparent-color {
+  background: rgb(66 76 80 / 80%);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+}
+
+/* ---------------------------TITLES--------------------------------*/
+
+#jumbo .titles {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#jumbo .titles h1 {
+  font-family: oswald;
+  font-size: 6rem;
+  font-weight: 700;
+  color: #facd33;
+  text-transform: uppercase;
+  transform: translate3d(50px, 25px, 0);
+}
+
+#jumbo .titles h2 {
+  border: 5px solid white;
+  width: 27%;
+  padding: 3px;
+  font-size: 5rem;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+  transform: translate3d(540px, 25px, 0);
+}
+
+#jumbo .titles h2:hover {
+  border: 5px solid black;
+  color: black;
+  background-color: #facd33;
+}
+
+#jumbo .state {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 15%;
+  width: 100%;
+  background: white;
+  bottom: 0;
+}
+
+#jumbo .state .number {
+  font-weight: 800;
+  font-size: 3rem;
+  transform: translate3d(20px, 0px, 0px);
+  color: #424249;
+}
+
+#jumbo .store-info {
+  z-index: 3;
+  display: flex;
+  position: absolute;
+  height: 20%;
+  width: 70%;
+  background: #0cdbdd;
+  bottom: 0;
+  right: 0;
+}
+
+#jumbo .store-info img {
+  height: 100%;
+  width: 25%;
+  object-fit: cover;
+  cursor: pointer;
+  filter: saturate(5%);
+  transition: all 0.4s ease-in-out;
+}
+
+#jumbo .store-info img:hover {
+  filter: saturate(95%);
+}
+
+/* ------------------------------------------------------------------ 
+--------------------------- INFORMATION -----------------------------
+------------------------------------------------------------------ */
+
+#information {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+#information h2 {
+  color: #facd33;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+#information .row {
+  margin: 0 15%;
+}
+
+#information .row div[class*="col"] {
+  margin-bottom: 25px;
+}
+
+#information .selections-bg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  height: 100%;
+  min-height: 300px;
+}
+
+#information .selections-bg .selections-img {
+  width: 100%;
+  height: 90%;
+}
+
+#information .selections-bg .overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background: #1f1f1f;
+  color: white;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#information .selections-bg .overlay:hover {
+  opacity: 0.8;
+}
+
+#information .selections-bg .selections-title {
+  color: #facd33;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+#information .selections-bg .selections-description {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 0 20px;
+}
+
+/* ------------------------------------------------------------------ 
+------------------------- TESTIMONIALS ------------------------------
+------------------------------------------------------------------ */
+
+#testimonials {
+  background: black;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+#testimonials .bg-video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  transform: scale(1.5);
+}
+
+#testimonials .transparent-color {
+  background: rgb(66 76 80 / 50%);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+}
+
+#testimonials .overlay {
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#testimonials .overlay .testimonial {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  z-index: 2;
+  padding: 0 30px;
+  line-height: 2;
+}
+
+#testimonials .overlay .quoted {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: white;
+  z-index: 2;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* ------------------------------------------------------------------ 
+-------------------------- DEAL-SECTION -----------------------------
+------------------------------------------------------------------ */
+
+#deal-section {
+  background: rgb(66 66 66);
+  height: 500px;
+  width: 100%;
+  margin: 50px 0px;
+}
+
+#deal-section .deal-container {
+  background: #363636;
+  height: 100%;
+  width: 70%;
+  padding: 40px 20px;
+  margin: 0 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 2px;
+}
+
+#deal-section .deal-container img {
+  height: 200px;
+  width: 200px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#deal-section .deal-container h6 {
+  color: #facf33;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+#deal-section .deal-container h4 {
+  color: rgb(158 158 158);
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+#deal-section .deal-container span {
+  color: #facf33;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* --------------------------- FORM --------------------------------*/
+
+#deal-section .deal-container form {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+#deal-section .deal-container form input {
+  width: 100%;
+  padding: 7px 10px;
+  margin-bottom: 20px;
+  border: none;
+  display: block;
+  border-radius: 3px;
+}
+
+#deal-section .deal-container form a {
+  background: #facf33;
+  color: black;
+  display: block;
+  width: 100%;
+  padding: 7px 47%;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+/* ------------------------------------------------------------------ 
+----------------------------- FOOTER --------------------------------
+------------------------------------------------------------------ */
+
+footer {
+  background: rgb(19, 19, 19);
+}
+
+footer a {
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #ffd400;
+}
+
+footer .container {
+  padding: 50px 0;
+}
+
+footer .menu-title,
+footer .social-title {
+  color: #ffd400;
+  text-transform: uppercase;
+}
+
+footer .footer-menu li {
+  color: white;
+}
+
+footer .social-title {
+  color: #ffd400;
+  text-transform: uppercase;
+  padding: 0 45px;
+}
+
+footer .social-icons {
+  display: flex;
+  align-items: center;
+}
+
+footer .social-icons i {
+  border-radius: 50%;
+  background: white;
+  font-size: 1.3rem;
+  color: black;
+  padding: 13px;
+  margin-top: 5px;
+  margin-right: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+footer .social-icons .fa-facebook {
+  border-radius: 50%;
+  background: white;
+  font-size: 1.3rem;
+  color: black;
+  padding: 13px 17px;
+  margin-top: 5px;
+  margin-right: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+footer .social-icons i:hover {
+  background: #000;
+  color: #ffd400;
+}
+
+footer .container .store-info {
+  margin: 20px 0 0 0;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+footer .container .store-info span {
+  width: 100%;
+}
+
+footer .container .store-info .copyright {
+  font-size: 1rem;
+}
+
+/* ------------------------------------------------------------------ 
+------------------------ MOBILE-MENU --------------------------------
+------------------------------------------------------------------ */
+
+#mobile-menu {
+  background: black;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  padding: 20px;
+  display: none;
+  transform: translate3d(-100%, 0, 0);
+}
+
+#mobile-menu.active {
+  display: block;
+}
+
+#mobile-menu .logo {
+  text-align: center;
+}
+
+#mobile-menu .logo a {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #ffd400;
+}
+
+.close-mobile-menu {
+  height: 50px;
+  width: 50px;
+  font-size: 1.5rem;
+  text-align: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+#mobile-menu .menu > li {
+  margin-bottom: 1rem;
+}
+
+#mobile-menu .menu > li > a {
+  text-align: center;
+  font-size: 1.1rem;
+  display: block;
+  color: #ffd400;
+  width: 100%;
+  padding-top: 10px;
+  border-bottom: 1px solid #ffd400;
+  margin-bottom: 1rem;
+}
+
+#mobile-menu .menu .link .sub-menu {
+  display: flex;
+  justify-content: center;
+}
+
+#mobile-menu .menu > li.dropdown .sub-menu a {
+  display: inline-block;
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 7px;
+}
+
+.close-mobile-menu i {
+  padding: 10px;
+}
+
+#mobile-menu .deal-container {
+  background: #363636;
+  height: 100%;
+  width: 70%;
+  padding: 30px 20px;
+  margin: 0 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 2px;
+}
+
+#mobile-menu .deal-container img {
+  height: 120px;
+  width: 120px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#mobile-menu .deal-container h4 {
+  color: #facf33;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+#mobile-menu .deal-container h6 {
+  color: rgb(158 158 158);
+  margin-bottom: 15px;
+}
+
+#mobile-menu .deal-container span {
+  color: #facf33;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* --------------------------- FORM --------------------------------*/
+
+#mobile-menu .deal-container form {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+#mobile-menu .deal-container form input {
+  width: 100%;
+  padding: 7px 10px;
+  margin-bottom: 20px;
+  border: none;
+  display: block;
+  border-radius: 3px;
+}
+
+#mobile-menu .deal-container form a {
+  background: #facf33;
+  color: black;
+  display: block;
+  width: 100%;
+  padding: 7px 47%;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+/* ------------------------------------------------------------------ 
+---------------------- PROGRAMS // PROGRAMS.HTML --------------------
+------------------------------------------------------------------ */
+
+#programs {
+  padding: 80px 75px;
+}
+
+#programs .individual-training,
+#programs .group-classes,
+#programs .kids-program,
+#programs .womens-program {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+#programs .individual-training .program-image img,
+#programs .group-classes .program-image img,
+#programs .kids-program .program-image img,
+#programs .womens-program .program-image img {
+  height: 300px;
+  width: 400px;
+  margin-bottom: 30px;
+}
+
+#programs .individual-training .program-image h2,
+#programs .group-classes .program-image h2,
+#programs .kids-program .program-image h2,
+#programs .womens-program .program-image h2 {
+  color: #facd33;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* #programs .individual-training .program-image h2:hover,
+#programs .group-classes .program-image h2:hover,
+#programs .kids-program .program-image h2:hover,
+#programs .womens-program .program-image h2:hover {
+  color: #facd33;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+} */
+
+#programs .individual-training .program-description p,
+#programs .group-classes .program-description p,
+#programs .kids-program .program-description p,
+#programs .womens-program .program-description p {
+  color: #fdfdfd;
+  font-size: 1.2rem;
+}
+
+/* ------------------------------------------------------------------ 
+---------------------- CALENDAR // SCHEDULE.HTML --------------------
+------------------------------------------------------------------ */
+
+#calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+#calendar h1 {
+  color: #facd33;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding-bottom: 25px;
+}
+
+#calendar .container {
+  background: #d0d0d0;
+  border-radius: 3px;
+  padding: 40px;
+}
+
+#calendar .container .days {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+#calendar .container .classes {
+  color: #3e3e3e;
+  font-size: 1.1rem;
+}
+/* ------------------------------------------------------------------ 
+---------------------- PRIVATES // SCHEDULE.HTML --------------------
+------------------------------------------------------------------ */
+
+#privates {
+  text-align: center;
+}
+
+#privates h1 {
+  color: #facd33;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding-bottom: 25px;
+}
+
+#privates h4 {
+  color: #fdfdfd;
+  font-size: 1.2rem;
+}
+
+/* ------------------------------------------------------------------ 
+---------------------- CONTACT-AREA // CONTACT.HTML -----------------
+------------------------------------------------------------------ */
+#contact-area {
+  width: 100%;
+}
+
+#contact-area .container {
+  margin-top: 75px;
+  text-align: center;
+}
+
+#contact-area .container h1 {
+  color: #facd33;
+}
+
+#contact-area .container form {
+  background: #232323;
+
+  padding: 25px 25px 20px 25px;
+}
+
+#contact-area .container input {
+  width: 100%;
+  color: #1f1f1f;
+  font-weight: 500;
+  padding: 15px 10px;
+  font-size: 1.3rem;
+}
+
+#contact-area .row div[class*="col-lg-6"] {
+  padding-bottom: 25px;
+}
+
+#contact-area .container textarea {
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #1f1f1f;
+}
+#contact-area .container .row .col-lg-6 p {
+  font-size: 1.2rem;
+  color: #fdfdfd;
+}
+#contact-area .container .row .col-lg-6 span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #facd33;
+}
+
+#contact-area .container .row .col-lg-6 .title {
+  display: inline-block;
+}
+
+#contact-area .container .row .col-lg-6 h6 {
+  font-size: 1.2rem;
+  color: #fdfdfd;
+}
+
+/* ------------------------------------------------------------------ 
+---------------------- CONTACT-AREA // CONTACT.HTML -----------------
+------------------------------------------------------------------ */
+
+#map {
+  width: 100%;
+}
+#map .map-container {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#map .map-container iframe {
+  width: 90%;
+}
+
+/* ------------------------------------------------------------------ 
+------------------------ MEDIA QUIERIES -----------------------------
+------------------------------------------------------------------ */
+
+/* TABLETS */
+@media (min-width: 768px) and (max-width: 991px) {
+  #jumbo .titles {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #jumbo .titles h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    padding: 0 5%;
+  }
+  #jumbo .titles a {
+    text-align: center;
+    margin: 0 auto;
+  }
+  #jumbo .titles h2 {
+    border: 2px solid white;
+    width: 100%;
+    padding: 8px;
+    font-size: 2rem;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    transform: none;
+  }
+  #jumbo .titles h2:hover {
+    border: 2px solid black;
+    color: black;
+    background-color: #facd33;
+  }
+  #twoCollections .left-c .collection-title {
+    transform: translate3d(80px, -115px, 0px);
+    font-size: 2.5rem;
+  }
+  #twoCollections .right-c .collection-title {
+    transform: translate3d(-40px, -120px, 0px);
+    font-size: 2.5rem;
+  }
+  #testimonials .overlay .testimonial {
+    font-size: 1.2rem;
+  }
+
+  #information .selections-bg .selections-description {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+}
+
+/* LARGE PHONES */
+@media (min-width: 576px) and (max-width: 767px) {
+  #jumbo .titles {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #jumbo .titles h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    padding: 0 5%;
+  }
+  #jumbo .titles a {
+    text-align: center;
+    margin: 0 auto;
+  }
+  #jumbo .titles h2 {
+    border: 2px solid white;
+    width: 100%;
+    padding: 8px;
+    font-size: 2rem;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    transform: none;
+  }
+  #jumbo .titles h2:hover {
+    border: 2px solid black;
+    color: black;
+    background-color: #facd33;
+  }
+  #testimonials {
+    background: black;
+    height: 75vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 25px;
+    overflow: hidden;
+  }
+  #testimonials .transparent-color {
+    background: rgb(66 76 80 / 50%);
+    height: 75vh;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+  }
+  #testimonials .overlay {
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #testimonials .overlay .testimonial {
+    font-size: 1rem;
+  }
+  #calendar {
+    margin-bottom: 40px;
+  }
+}
+
+/* SMALL PHONES */
+@media (min-width: 1px) and (max-width: 575px) {
+  #jumbo .bg-video {
+    background: url("jumbobg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    transform: scale(2.9);
+  }
+  #jumbo .titles {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #jumbo .titles h1 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+  #jumbo .titles a {
+    text-align: center;
+    margin: 0 auto;
+  }
+  #jumbo .titles h2 {
+    border: 2px solid white;
+    width: 100%;
+    padding: 8px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    transform: none;
+  }
+  #jumbo .titles h2:hover {
+    border: 2px solid black;
+    color: black;
+    background-color: #facd33;
+  }
+  #twoCollections .left-c .collection-title {
+    transform: translate3d(104px, -145px, 0px);
+    font-size: 2.5rem;
+  }
+  #twoCollections .right-c .collection-title {
+    font-size: 2.5rem;
+  }
+  #testimonials {
+    background: black;
+    height: 75vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 25px;
+    overflow: hidden;
+  }
+  #testimonials .transparent-color {
+    background: rgb(66 76 80 / 50%);
+    height: 75vh;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+  }
+  #testimonials .overlay {
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #testimonials .overlay .testimonial {
+    font-size: 0.8rem;
+  }
+  #testimonials .overlay .quoted {
+    font-size: 1rem;
+  }
+  #deal-section {
+    background: rgb(66 66 66);
+    height: 600px;
+    width: 100%;
+    margin: 50px 0px;
+  }
+  #deal-section .deal-container {
+    background: #363636;
+    height: 100%;
+    width: 70%;
+    padding: 19px 20px;
+    margin: 27px 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2px;
+  }
+  #deal-section .deal-container form {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  #deal-section .deal-container form a {
+    background: #facf33;
+    color: black;
+    display: block;
+    width: 100%;
+    padding: 7px 30%;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 3px;
+  }
+  footer .social-title {
+    color: #ffd400;
+    text-transform: uppercase;
+    padding: 0 45px;
+  }
+  footer .social-menu {
+    transform: translate(145px, 0px) !important;
+  }
+  #calendar {
+    margin-top: 350px;
+    margin-bottom: 450px;
+  }
+}
